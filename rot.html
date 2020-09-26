@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>FallAsleep</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/Startstyle.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	  <meta name="keywords" content="">
+    <link rel="shortcut icon" href="img/favicon.jpg">
+    <title>FallAsleep</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Train to relax correctly! Breathe right!</h1>
+    </header>
+	   <main>
+	   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<ul class="welcome-text">
+			<li class="meet start active">Inhale</li>
+			<li class="meet Meet hiddenclass">Exhale</li>
+		</ul>
+		
+<script>
+$(document).ready(function() {
+  setInterval('blockAnimate();', 4000);
+});
+
+function blockAnimate() {
+  $('.active').removeClass('upnext')
+  let active = $('.active');
+  active.addClass('up');
+  let next = $('.active').next('li').length ? $('.active').next('li') : $('.welcome-text li').first();
+  $('.active').removeClass('active');
+  next.addClass('upnext active');
+  active.addClass('hiddenclass')
+}
+</script>
+	
+		
+		
+      <article>
+      <div class="submitted">
+
+	  <img class="rot" src="img/blue_circle.png">
+	  
+	  <style>
+    img.rot {
+      animation: 2s ease-in 0s normal none infinite running rot;
+      -webkit-animation: 8s linear 0s normal none infinite running rot;
+      animation-timing-function: steps(100, end);
+      width: 500px;
+    }
+    @keyframes rot {
+  0% {
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3),rotate(0.5turn);
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+	transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+}
+    @-webkit-keyframes rot {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+  </style>
+	  
+	  
+        </div>
+      </article>
+      
+    <nav>
+    <h3>
+    Download the app:
+    </h3>
+        <h3>
+        <a href="index.html" class="btn Store" type="button">iStore</a>
+        </h3>
+    </nav>
+
+    </main>
+
+
+    <footer>
+      <p>©Copyright 2020 by A&Y. All rights reversed.</p>
+    </footer>
+
+  </body>
+</html>
